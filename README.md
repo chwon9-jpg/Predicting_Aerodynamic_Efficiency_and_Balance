@@ -1,7 +1,7 @@
 <h1 align="center">Beyond the Wind Tunnel: Machine Learning for F1 Front Wing Aerodynamics</h1>
 
 <p align="center">
-  <em>Can four regression models predict a Formula 1 front wing's aerodynamic efficiency and balance from raw CFD force and moment readings?</em>
+  <em>A machine learning study evaluating four regression models trained to predict Formula 1 front wing aerodynamic efficiency and aero balance using raw force and moment readings from Computational Fluid Dynamics (CFD) simulations.</em>
 </p>
 
 <p align="center">
