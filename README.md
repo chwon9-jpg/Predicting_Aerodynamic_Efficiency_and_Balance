@@ -1,10 +1,6 @@
 <h1 align="center">Beyond the Wind Tunnel: Machine Learning for F1 Front Wing Aerodynamics</h1>
 
 <p align="center">
-  <em>A machine learning study evaluating four regression models trained to predict Formula 1 front wing aerodynamic efficiency and aero balance using raw force and moment readings from Computational Fluid Dynamics (CFD) simulations.</em>
-</p>
-
-<p align="center">
   <img src="images/21_targets_explained.png" alt="Side profile of an F1 car with a 5x downforce arrow pointing down onto the body and a 1x drag arrow at the rear. The front wing is highlighted orange and carries 30 percent of the downforce; the floor, rear wing and rest of the car are slate gray and carry 70 percent" width="90%">
 </p>
 
