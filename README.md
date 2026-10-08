@@ -47,9 +47,9 @@ The same shape appears in the underlying forces. Pressure forces dominate: rough
   <img src="images/02_pressure_forces_over_time.png" alt="Pressure force components in X, Y and Z over simulation time, each with an initial transient followed by a steady state" width="85%">
 </p>
 
-### Transient versus steady state
+### Transient versus Steady state
 
-The first ~500 timesteps behave very differently from the rest. The boxplots below show the transient phase carrying all the extreme outliers, including a CL/CD value near 25 and CLF/CL swings between 0.05 and 0.35, while the steady-state phase is almost a single point. This transient phase is what makes CL/CD hard for linear models.
+The first approx. 500 timesteps behave very differently from the rest. The box-plots below show the transient phase carrying all the extreme outliers, including a CL/CD value near 25 and CLF/CL swings between 0.05 and 0.35, while the steady-state phase is almost a single point. This transient phase is what makes CL/CD hard for linear models.
 
 <p align="center">
   <img src="images/05_transient_vs_steady_state.png" alt="Boxplots of CL/CD and CLF/CL for the steady-state and transient phases, showing large outliers only in the transient phase" width="80%">
@@ -109,7 +109,7 @@ The 12 features move together, so the information in them is highly redundant. M
 
 Random Forest is the decisive winner for CL/CD (about 99× lower MSE than PCA and 29× lower than LASSO), while all regularised methods perform comparably for aero balance.
 
-### Predicted versus actual
+### Predicted versus Actual
 
 Each panel plots held-out test predictions against the true values; points on the dashed line are perfect. For **CL/CD**, the linear models collapse their predictions toward the steady-state mean (about 4.8) and miss the transient timesteps, so their points form a flat band. Random Forest follows the diagonal across the whole range.
 
@@ -123,7 +123,7 @@ For **CLF/CL**, every model except the PCA baseline sits almost exactly on the l
   <img src="images/19_predicted_vs_actual_clf_cl.png" alt="Predicted versus actual CLF/CL on the test set for PCA regression, LASSO, Ridge and Random Forest" width="85%">
 </p>
 
-### Which features matter?
+### Relevant features
 
 LASSO's L1 penalty zeroes out coefficients, which doubles as feature selection. For **CL/CD** it keeps just 2 of 12 features, `PRESSURE_MOMENT_Y` and `PRESSURE_FORCE_X`, which is physically sensible because drag directly enters the CL/CD denominator. For **CLF/CL** it keeps 7 of 12. All viscous force features are zeroed out for CL/CD, consistent with their tiny magnitude.
 
@@ -137,7 +137,7 @@ Random Forest tells a consistent story from a different angle. For CL/CD, `PRESS
   <img src="images/15_rf_feature_importance.png" alt="Random Forest feature importances for CL/CD and CLF/CL" width="90%">
 </p>
 
-### How much data do the models need?
+### Amount of data models require
 
 The degradation study retrains each model on smaller random subsets of the training data and scores it on the same fixed 1,000 timestep test set.
 
